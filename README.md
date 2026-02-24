@@ -1,4 +1,6 @@
+
 AUTHOR: SHANSIT SUMAN & SHREYA GOYAL
+
 How to Run in my device:
 1) open the folder in your VS code.
 2) change directory to backend (cd backend)
