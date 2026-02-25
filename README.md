@@ -15,6 +15,9 @@ MongoDB connected successfully)
 7) NOW YOU ARE GOOD TO GO, JUST CLICK ON THAT http://localhost:5173/ URL 
 
 
+## Project Structure
+
+```
 Where-is-My-Faculty/
 │
 ├── backend/
@@ -78,4 +81,5 @@ Where-is-My-Faculty/
 │   └── package-lock.json
 │
 └── README.md
+```
 ```
