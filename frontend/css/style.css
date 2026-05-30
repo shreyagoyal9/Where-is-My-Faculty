@@ -1,0 +1,97 @@
+/* Website Cards */
+/* Toggle Switch */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #490307;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #490307;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #FFFED0;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+/* Dark Mode Base */
+.dark-mode {
+  background-color: #121212 !important;
+  color: #fcfafa !important;
+}
+
+/* Cards */
+.dark-mode .card {
+  background: rgba(69, 68, 68, 0.95) !important;
+  color: #fdfbfb !important;
+  border: 1px solid #333 !important;
+}
+
+/* Headings */
+.dark-mode h1 {
+  color:rgb(133, 132, 132) !important;
+}
+
+.dark-mode h3 {
+  color: #a10a60 !important;
+}
+
+/* Paragraphs */
+.dark-mode p {
+  color: #a10a60 !important;
+}
+
+/* Buttons */
+.dark-mode button {
+  background-color: #333 !important;
+  color: #FFFED0 !important;
+  border: 1px solid #555 !important;
+}
+
+
+.dark-mode {
+  background: linear-gradient(rgba(18,18,18,0.8), rgba(18,18,18,0.8)),
+              url("/public/img/bg.jpg") no-repeat top center !important;
+  background-size: cover !important;
+}
