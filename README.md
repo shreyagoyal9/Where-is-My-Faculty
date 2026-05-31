@@ -23,40 +23,40 @@ A university web application that lets students find faculty availability in rea
 
 ```mermaid
 graph TD
-    subgraph Frontend ["🌐 Frontend (Netlify — Static HTML)"]
-        A[index.html] --> B[student-login / register]
-        A --> C[faculty-login / register]
-        A --> D[club-login / register]
-        B --> E[student-dashboard.html]
-        C --> F[faculty-dashboard.html]
-        D --> G[club-dashboard.html]
-        H[admin-dashboard.html]
-        I[ffcs-dashboard.html]
-        J[config.js — API_URL]
+    subgraph FE [Frontend - Netlify Static HTML]
+        A[index.html] --> B[Student Login & Register]
+        A --> C[Faculty Login & Register]
+        A --> D[Club Login & Register]
+        B --> E[student-dashboard]
+        C --> F[faculty-dashboard]
+        D --> G[club-dashboard]
+        A --> H[admin-dashboard]
+        A --> I[ffcs-dashboard]
+        J[config.js - API_URL]
     end
 
-    subgraph Backend ["⚙️ Backend (Render — Node/Express)"]
-        K[Express Server :5000]
-        K --> L[/api/student]
-        K --> M[/api/faculty]
-        K --> N[/api/club]
-        K --> O[/api/admin]
-        K --> P[/uploads — static images]
+    subgraph BE [Backend - Render Node Express]
+        K[Express Server port 5000]
+        K --> L[api student]
+        K --> M[api faculty]
+        K --> N[api club]
+        K --> O[api admin]
+        K --> P[uploads - static images]
     end
 
-    subgraph DB ["🗄️ Database (MongoDB Atlas)"]
+    subgraph DB [Database - MongoDB Atlas]
         Q[(Students)]
         R[(Faculties)]
-        S[(Clubs + Events)]
+        S[(Clubs and Events)]
     end
 
-    subgraph Auth ["🔐 Auth Middleware"]
-        T[auth.js — Student JWT]
-        U[facultyAuth.js — Faculty JWT]
-        V[clubAuth.js — Club JWT]
+    subgraph AUTH [Auth Middleware]
+        T[auth.js - Student JWT]
+        U[facultyAuth.js - Faculty JWT]
+        V[clubAuth.js - Club JWT]
     end
 
-    Frontend -->|HTTP fetch via API_URL| Backend
+    FE -->|HTTP fetch via API_URL| BE
     L --> Q
     M --> R
     N --> S
