@@ -4,7 +4,7 @@ A university web application that lets students find faculty availability in rea
 
 **Built by:** Shansit Suman & Shreya Goyal
 
-**Live App:** [where-is-my-faculty.netlify.app](https://where-is-my-faculty.netlify.app) *(update after deployment)*
+**Live App:** will update later
 
 ---
 
