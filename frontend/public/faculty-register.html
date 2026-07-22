@@ -102,6 +102,7 @@
     }
   }
 </style>
+  <script src="/js/config.js"></script>
 </head>
 <body class="bg-cover bg-top" style="background-image: url('/img/bg.jpg')"></body>
 <body>
@@ -149,7 +150,7 @@
     };
 
     try {
-      const res = await fetch('http://localhost:5000/api/faculty/register', {
+      const res = await fetch(`${API_URL}/api/faculty/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)

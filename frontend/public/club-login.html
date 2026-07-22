@@ -80,6 +80,7 @@
     }
   }
 </style>
+  <script src="/js/config.js"></script>
 </head>
 <body class="bg-cover bg-top" style="background-image: url('/img/WhatsApp Image 2025-09-08 at 23.43.53_9a77392f.jpg')"></body>
 
@@ -119,7 +120,7 @@ document.getElementById('clubLoginForm').addEventListener('submit', async (e) =>
   const identifier = emailPattern.test(identifierInput) ? identifierInput.toLowerCase() : identifierInput;
 
   try {
-    const res = await fetch('http://localhost:5000/api/club/login', {
+    const res = await fetch(`${API_URL}/api/club/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ identifier, password: passwordInput })

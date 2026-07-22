@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Club Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/js/config.js"></script>
 </head>
 <body class="bg-cover bg-top" style="background-image: url('/img/WhatsApp Image 2025-09-09 at 00.02.48_83d882ec.jpg')"></body>
 <body class="bg-gray-100 font-sans min-h-screen">
@@ -64,7 +65,7 @@ if (!clubToken) {
 // Fetch and display events
 async function fetchEvents() {
   try {
-    const res = await fetch('http://localhost:5000/api/club/me', {
+    const res = await fetch(`${API_URL}/api/club/me`, {
       headers: { 'Authorization': `Bearer ${clubToken}` }
     });
     const data = await res.json();
@@ -111,7 +112,7 @@ document.getElementById('eventForm').addEventListener('submit', async e => {
   if(file) formData.append('poster', file);
 
   try {
-    const res = await fetch('http://localhost:5000/api/club/event', {
+    const res = await fetch(`${API_URL}/api/club/event`, {
       method: 'POST',
       headers: { 'Authorization': `Bearer ${clubToken}` },
       body: formData

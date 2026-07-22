@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Student Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/js/config.js"></script>
 </head>
 <body class="bg-right bg-gray-100 font-sans min-h-screen" style="background-image: url('/img/WhatsApp Image 2025-09-08 at 23.38.59_26db485f.jpg'); background-size:cover; background-position:center;">
 
@@ -37,7 +38,7 @@ if (!studentToken) {
 // --- Fetch Faculties ---
 async function fetchFaculties() {
   try {
-    const res = await fetch('http://localhost:5000/api/faculty', {
+    const res = await fetch(`${API_URL}/api/faculty`, {
       headers: { 'Authorization': `Bearer ${studentToken}` }
     });
     const data = await res.json();
@@ -83,7 +84,7 @@ function displayFaculties(faculties) {
 document.getElementById('facultySearch').addEventListener('input', async (e) => {
   const search = e.target.value.toLowerCase();
   try {
-    const res = await fetch('http://localhost:5000/api/faculty', {
+    const res = await fetch(`${API_URL}/api/faculty`, {
       headers: { 'Authorization': `Bearer ${studentToken}` }
     });
     const data = await res.json();
@@ -97,7 +98,7 @@ document.getElementById('facultySearch').addEventListener('input', async (e) => 
 // --- Fetch Clubs ---
 async function fetchClubs() {
   try {
-    const res = await fetch('http://localhost:5000/api/club/all', {
+    const res = await fetch(`${API_URL}/api/club/all`, {
       headers: { 'Authorization': `Bearer ${studentToken}` }
     });
     const data = await res.json();
