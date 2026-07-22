@@ -16,3 +16,4 @@ Thumbs.db
 
 # Env files (for secrets like DB passwords, API keys)
 .env
+**/.env
