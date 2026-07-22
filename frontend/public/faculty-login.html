@@ -161,7 +161,7 @@
     const password = document.getElementById('facultyPassword').value;    // ✅ correct ID
 
     try {
-      const res = await fetch(`${API_URL}/api/faculty/login", {
+      const res = await fetch(`${API_URL}/api/faculty/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ facultyID, password }) // ✅ now facultyID is correct
