@@ -4,7 +4,7 @@ A university web application that lets students find faculty availability in rea
 
 **Built by:** Shansit Suman & Shreya Goyal
 
-**Live App:** will update later
+**Live App:** https://where-is-my-faculty-frontend.onrender.com/
 
 ---
 
