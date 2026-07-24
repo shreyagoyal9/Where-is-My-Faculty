@@ -128,10 +128,10 @@
       text-align: center;
     }
   }
-</style
+</style>
   <script src="/js/config.js"></script>
 </head>
-<body class="bg-cover bg-top" style="background-image: url('/img/InShot_20250908_232606967.jpg')"></body>
+<body class="bg-cover bg-top" style="background-image: url('/img/InShot_20250908_232606967.jpg')">
 <body>
   <div class="wrap">
     <div class="box">
@@ -161,7 +161,7 @@
     const password = document.getElementById('facultyPassword').value;    // ✅ correct ID
 
     try {
-      const res = await fetch(`${API_URL}/api/faculty/login", {
+      const res = await fetch(`${API_URL}/api/faculty/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ facultyID, password }) // ✅ now facultyID is correct
